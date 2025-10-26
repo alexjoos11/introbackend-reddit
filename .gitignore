@@ -4,3 +4,4 @@ __pycache__/
 .black/
 .vscode/
 NOTES.md
+src/pa1_test.py
