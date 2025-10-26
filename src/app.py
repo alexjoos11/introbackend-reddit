@@ -23,29 +23,7 @@ def hello_world():
 #   "link": str(URL),
 #   "username": str
 # }
-posts = {
-    1: {
-        "id": 1,
-        "upvotes": 1,
-        "title": "My cat is the cutest!",
-        "link": "https://i.imgur.com/jseZqNK.jpg",
-        "username": "alicia98",
-    },
-    2: {
-        "id": 2,
-        "upvotes": 3,
-        "title": "Check out my new puppy!",
-        "link": "https://i.imgur.com/puppy.jpg",
-        "username": "doglover42",
-    },
-    3: {
-        "id": 3,
-        "upvotes": 1234,
-        "title": "Upvote or bad things",
-        "link": "https://i.imgur.com/cat.jpg",
-        "username": "monkey1234",
-    },
-}
+posts = {}
 post_id_counter = 4  # one more than the current posts for create
 
 # comments: Dict[int, Dict]
@@ -59,37 +37,7 @@ post_id_counter = 4  # one more than the current posts for create
 #   "text": str,
 #   "username": str
 # }
-comments = {
-    1: {
-        "comment_id_counter": 3,
-        "data": {
-            1: {
-                "id": 1,
-                "upvotes": 12,
-                "text": "wow my first reddit gold!",
-                "username": "alicia98",
-            },
-            2: {
-                "id": 2,
-                "upvotes": 12,
-                "text": "wow my first reddit gold!",
-                "username": "alicia98",
-            },
-        },
-    },
-    2: {
-        "comment_id_counter": 2,
-        "data": {
-            1: {
-                "id": 1,
-                "upvotes": 12,
-                "text": "comment comment",
-                "username": "alex1234",
-            }
-        },
-    },
-    3: {"comment_id_counter": 1, "data": {}},
-}
+comments = {}
 
 
 # get all posts, without returning their comments
