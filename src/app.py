@@ -7,6 +7,7 @@ from flask import request
 app = Flask(__name__)
 
 
+# root endpoint included in the starter code
 @app.route("/")
 def hello_world():
     return "Hello world!"
@@ -198,7 +199,6 @@ def get_comments_by_id(post_id):
         return json.dumps({"error": "Post not found"}), 404
     post_comments = comments[post_id]["data"]
     return_comments = {"comments": list(post_comments.values())}
-    # TODO: What should the return be if there are no comments 404 or {}?
     return json.dumps(return_comments), 200
 
 
@@ -221,7 +221,6 @@ def create_comment(post_id):
     text = body.get("text")
     username = body.get("username")
 
-    # TODO: Is there priority for errors?
     if not text or not username:
         return json.dumps({"error": "Bad request"}), 400
 
@@ -238,7 +237,6 @@ def create_comment(post_id):
     comments[post_id]["comment_id_counter"] += 1
     comments[post_id]["data"][comment_id] = comment
 
-    print(comment)
     return json.dumps(comment), 201
 
 
@@ -271,7 +269,6 @@ def edit_comment(post_id, comment_id):
         return json.dumps({"error": "Comment not found"}), 404
 
     comment["text"] = text  # pass by reference
-    # TODO: When returning things like this sould I return a copy or the actual value?
     return json.dumps(comment), 200
 
 

@@ -3,3 +3,4 @@ venv/
 __pycache__/
 .black/
 .vscode/
+NOTES.md
