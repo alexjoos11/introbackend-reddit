@@ -24,7 +24,7 @@ def hello_world():
 #   "username": str
 # }
 posts = {}
-post_id_counter = 4  # one more than the current posts for create
+post_id_counter = 1  # one more than the current posts for create
 
 # comments: Dict[int, Dict]
 # Maps post_id -> { "comment_id_counter": int, "data": Dict[int, Comment] }
